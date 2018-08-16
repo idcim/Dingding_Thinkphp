@@ -1,0 +1,35 @@
+{
+    "name": "idcim/dingding_thinkphp",
+    "description": "Dingding For Thinkphp SDK",
+    "type": "project",
+    "keywords": [
+        "Dingding",
+        "thinkphp",
+        "thinkphp5.1",
+        "钉钉"
+    ],
+    "homepage": "http://www.h6.design/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "idcim",
+            "email": "idcim@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "topthink/framework": "5.1.*",
+        "idcim/dingding_thinkphp": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "application"
+        }
+    },
+    "extra": {
+        "think-path": "thinkphp"
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
