@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
     "name": "idcim/dingding_thinkphp",
-=======
-    "name": "idcim/Dingding_Thinkphp",
->>>>>>> 49e2254c3f49c0c0686b3791ef344c7c29e6fbf2
     "description": "Dingding For Thinkphp SDK",
     "type": "project",
     "keywords": [
@@ -23,11 +19,7 @@
     "require": {
         "php": ">=5.6.0",
         "topthink/framework": "5.1.*",
-<<<<<<< HEAD
         "idcim/dingding_thinkphp": "^1.0"
-=======
-        "idcim/Dingding_Thinkphp": "^1.0"
->>>>>>> 49e2254c3f49c0c0686b3791ef344c7c29e6fbf2
     },
     "autoload": {
         "psr-4": {
