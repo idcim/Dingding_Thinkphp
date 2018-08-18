@@ -6,6 +6,11 @@
 # 安装
 
 把corp文件夹下载到THINKPHP5.1的extend文件夹内，在配置文件中添加接口配置数据。
+> app配置文件添加以下配置项。其中【xxxxx】为钉钉开发者后台获取的相应代码
+	'CORPID'=>'xxxxx',
+	'SECRET'=>'xxxxx',
+	'ssosecret'=>'xxxxx',
+	'AGENTID'=>'xxxxx',
 
 # 支持
 
