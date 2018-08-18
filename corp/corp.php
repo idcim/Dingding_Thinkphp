@@ -7,6 +7,7 @@ use \corp\util\Cache;
 use \corp\util\Log;
 use \corp\api\User;
 use \corp\api\Message;
+use \corp\api\Department;
 
 define('DIR_ROOT', dirname(__FILE__).'/');
 define("OAPI_HOST", Config('OAPI_HOST'));
@@ -41,7 +42,7 @@ class corp{
 	}
 	
 	//用户类型数据获得
-	function getUser($api_type,$id){
+	function getUser($api_type,$id=''){
 		$user = new User();
 		
 		switch ($api_type) {
@@ -56,7 +57,6 @@ class corp{
 	        //Log::i("[USERINFO-getuserid]".json_encode($userInfo));
 	        $arr=$userInfo;
 	        break;
-	
 	    case 'get_userinfo':
 			//获得指定用户信息详情
 	        $accessToken = $this->accessToken;
@@ -72,6 +72,14 @@ class corp{
 	        $deptInfo = $user->simplelist($accessToken, $deptId);
 	        $arr=$deptInfo;
 	        break;
+		case 'department':
+			//获得所有部门信息
+			$dept = new Department();
+		
+			$accessToken = $this->accessToken;
+	        $arr = $dept->listDept($accessToken);
+			
+			break;
 	    case 'jsapi-oauth':
 	        $href = $_GET["href"];
 	        $configs = $auth->getConfig($href);
@@ -82,16 +90,6 @@ class corp{
 		
 		//dump($this->accessToken);
 		return $arr;
-	}
-
-	//获得所有部门信息
-	function getDept(){
-		$dept = new Department();
-		
-		$accessToken = $this->accessToken;
-        $deplist = $dept->listDept($accessToken);
-        
-		return $deplist;
 	}
 	
 }
