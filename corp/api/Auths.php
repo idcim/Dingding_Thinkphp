@@ -1,6 +1,5 @@
 <?php
 namespace corp\api;
-
 use corp\util;
 
 
@@ -33,6 +32,8 @@ class Auths
             $accessToken = $response->access_token;
             $this->cache->setCorpAccessToken($accessToken);
         }
+		
+		
         return $accessToken;
     }
     
